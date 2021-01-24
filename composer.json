@@ -1,0 +1,39 @@
+{
+    "name": "alangiacomin/laravelreact",
+    "description": "Base application using Laravel + React",
+    "keywords": [
+        "framework",
+        "laravel",
+        "react"
+    ],
+    "license": "MIT",
+    "require": {
+        "illuminate/support": "~6.0|~7.0|~8.0",
+        "laravel/sanctum": "^2.8.2",
+        "tcg/voyager": "^1.4.2"
+    },
+    "require-dev": {
+        "laravel/framework": "~6.0|~7.0|~8.0",
+        "phpunit/phpunit": "^9.3.3"
+    },
+    "authors": [
+        {
+            "name": "Alan Giacomin",
+            "email": "alan.giacomin@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "AG\\LaravelReact\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AG\\LaravelReact\\LaravelReactServiceProvider"
+            ]
+        }
+    }
+}
