@@ -2,10 +2,10 @@
 
 namespace AG\LaravelReact\Http\Resources;
 
-abstract class SuccessResource extends ApiResource
+class SuccessResource extends BaseSuccessResource
 {
-  protected function isSuccess()
+  protected function getVars()
   {
-    return true;
+    return [];
   }
 }
