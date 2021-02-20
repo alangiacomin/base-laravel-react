@@ -151,6 +151,7 @@ class InstallCommand extends BaseCommand
             'i18next' => '^19.8.4',
             'i18next-browser-languagedetector' => '^6.0.1',
             'i18next-http-backend' => '^1.0.21',
+            'import-glob-loader' => '^1.1.0',
             'prop-types' => '15.7.2',
             'react' => '^16.0',
             'react-bootstrap' => '^1.4.0',

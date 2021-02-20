@@ -4,6 +4,7 @@
     "dependencies": {},
     "devDependencies": {
         "@alangiacomin/js-utils": "^1.0.0",
+        "@babel/core": "^7.12.10",
         "@babel/plugin-proposal-class-properties": "^7.12.1",
         "@babel/preset-env": "^7.12.11",
         "@babel/preset-react": "^7.12.10",
@@ -12,22 +13,22 @@
         "@fortawesome/free-solid-svg-icons": "^5.15.1",
         "@fortawesome/react-fontawesome": "^0.1.14",
         "@reduxjs/toolkit": "^1.5.0",
+        "babel-loader": "^8.2.2",
         "babel-plugin-transform-dynamic-import": "^2.1.0",
         "enzyme": "^3.11.0",
         "enzyme-adapter-react-16": "^1.15.6",
         "i18next": "^19.8.4",
         "i18next-browser-languagedetector": "^6.0.1",
         "i18next-http-backend": "^1.0.21",
+        "jest": "^26.6.3",
         "react": "^16.0",
         "react-bootstrap": "^1.4.0",
         "react-dom": "^16.0",
         "react-i18next": "^11.8.5",
         "react-redux": "^7.2.2",
-        "react-router-dom": "^5.2.0",
-        "jest": "^26.6.3"
+        "react-router-dom": "^5.2.0"
     },
     "scripts": {
         "test": "jest",
-        "test:watch": "jest --watch"
     }
 }
