@@ -4,7 +4,7 @@ import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import { renderUnauthorized } from '../../common/renderHelpers';
 import routes from '../../config/routes';
-import ErrorBoundary from '../ErrorBoundary';
+import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 
 const ProtectedRouteComponent = (props) => {
   const {

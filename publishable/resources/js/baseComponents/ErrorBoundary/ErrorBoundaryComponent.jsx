@@ -1,10 +1,11 @@
 import { absoluteUrl } from '@alangiacomin/js-utils';
 import { PropTypes } from 'prop-types';
-import React from 'react';
-import { LinkContainer } from 'react-router-bootstrap';
+import React, { useCallback } from 'react';
+import { Button } from 'react-bootstrap';
 
 const ErrorBoundaryComponent = (props) => {
   const { homepageRoute } = props;
+  const reload = useCallback(() => window.location.reload(), []);
   return (
     <div
       style={{
@@ -30,9 +31,9 @@ const ErrorBoundaryComponent = (props) => {
         >
           <h2>Ops! Si è rotto qualcosa</h2>
           <h4>Errore imprevisto</h4>
-          <LinkContainer to={homepageRoute} as="a">
-            Homepage
-          </LinkContainer>
+          <Button variant="link" onClick={reload}>
+            Ricarica
+          </Button>
         </div>
       </div>
     </div>
