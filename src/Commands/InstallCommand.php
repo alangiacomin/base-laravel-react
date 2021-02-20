@@ -134,6 +134,13 @@ class InstallCommand extends BaseCommand
             'MIX_APP_URL'
         );
 
+        $this->info('Adding package.json "start" script');
+        $this->fileReplaceContent(
+            $filesystem,
+            base_path('package.json'),
+            '"scripts": {',
+            '"scripts": {' + "\n" + '        "start": "npm run watch",'
+        );
         $this->info('Adding package.json dependencies');
         $this->addNpmDependencies($filesystem, [
             '@alangiacomin/js-utils' => '1.1.0',
