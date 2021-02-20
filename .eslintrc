@@ -1,0 +1,35 @@
+{
+    "env": {
+        "amd": true,
+        "browser": true,
+        "es6": true,
+        "jquery": true,
+        "node": true,
+        "worker": true
+    },
+    "extends": ["eslint:recommended", "plugin:react/recommended", "airbnb", "react-app"],
+    "parser": "babel-eslint",
+    "plugins": ["babel", "react", "react-hooks"],
+    "rules": {
+        "indent": [
+            "error",
+            2,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "import/extensions":"off",
+        "import/no-unresolved": "off", // only for this project
+        "import/no-extraneous-dependencies": "off", // only for this project
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+        "no-multiple-empty-lines": ["error"],
+        "linebreak-style": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "react/jsx-fragments": "off",
+        "react/jsx-props-no-spreading": "off",
+        "max-len": [2, { "code": 120, "tabWidth": 2, "ignoreUrls": true }],
+        "prefer-template": "warn",
+        "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+        "react-hooks/exhaustive-deps": "warn" // Checks effect dependencies
+    }
+}
