@@ -138,22 +138,37 @@ class InstallCommand extends BaseCommand
         $this->fileAppendContent(
             $filesystem,
             base_path('.gitignore'),
-            '/public/**/',
+            "/public/**/\n",
             '/public/**/'
         );
         $this->fileAppendContent(
             $filesystem,
             base_path('.gitignore'),
-            '/public/mix-manifest.json',
+            "/public/mix-manifest.json\n",
             '/public/mix-manifest.json'
         );
 
-        $this->info('Adding package.json "start" script');
+        $this->info('Adding package.json scripts');
         $this->fileReplaceContent(
             $filesystem,
             base_path('package.json'),
             '"scripts": {',
-            '"scripts": {' . "\n" . '        "start": "npm run watch",'
+            '"scripts": {' . "\n" . '        "lint:watch": "esw --watch --color --ext .jsx resources/js/**/*.js resources/js/**/*.jsx",',
+            '"lint:watch": "esw --watch --color --ext .jsx resources/js/**/*.js resources/js/**/*.jsx"'
+        );
+        $this->fileReplaceContent(
+            $filesystem,
+            base_path('package.json'),
+            '"scripts": {',
+            '"scripts": {' . "\n" . '        "lint": "eslint --ext .jsx resources/js/**/*.js resources/js/**/*.jsx",',
+            '"lint": "eslint --ext .jsx resources/js/**/*.js resources/js/**/*.jsx"'
+        );
+        $this->fileReplaceContent(
+            $filesystem,
+            base_path('package.json'),
+            '"scripts": {',
+            '"scripts": {' . "\n" . '        "start": "npm run watch",',
+            '"start": "npm run watch"'
         );
 
         $this->info('Adding package.json dependencies');
@@ -165,9 +180,21 @@ class InstallCommand extends BaseCommand
             '@fortawesome/react-fontawesome' => '^0.1.14',
             '@reduxjs/toolkit' => '^1.5.0',
             'axios' => '^0.21',
+            'babel-eslint' => '^10.1.0',
             'bootstrap' => '^4.5.3',
             'connected-react-router' => '^6.8.0',
             'core-js' => '^3.8.1',
+            'eslint' => '^7.18.0',
+            'eslint-config-airbnb' => '^18.2.1',
+            'eslint-config-react-app' => '^6.0.0',
+            'eslint-plugin-babel' => '^5.3.1',
+            'eslint-plugin-dependencies' => '^2.4.0',
+            'eslint-plugin-flowtype' => '^5.2.0',
+            'eslint-plugin-import' => '^2.22.1',
+            'eslint-plugin-jsx-a11y' => '^6.4.1',
+            'eslint-plugin-react' => '^7.22.0',
+            'eslint-plugin-react-hooks' => '^4.2.0',
+            'eslint-watch' => '^7.0.0',
             'formik' => '^2.2.6',
             'history' => '^4.10',
             'i18next' => '^19.8.4',
