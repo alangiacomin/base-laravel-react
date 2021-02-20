@@ -1,5 +1,5 @@
 import { absoluteUrl } from '@alangiacomin/js-utils';
-import { PropTypes } from 'prop-types';
+// import { PropTypes } from 'prop-types';
 import React, { useCallback } from 'react';
 import { Button } from 'react-bootstrap';
 
