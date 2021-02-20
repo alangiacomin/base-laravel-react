@@ -141,9 +141,10 @@ class InstallCommand extends BaseCommand
             '"scripts": {',
             '"scripts": {' + "\n" + '        "start": "npm run watch",'
         );
+
         $this->info('Adding package.json dependencies');
         $this->addNpmDependencies($filesystem, [
-            '@alangiacomin/js-utils' => '1.1.0',
+            '@alangiacomin/js-utils' => '^1.1.0',
             '@fortawesome/fontawesome-svg-core' => '^1.2.32',
             '@fortawesome/free-brands-svg-icons' => '^5.15.1',
             '@fortawesome/free-solid-svg-icons' => '^5.15.1',
