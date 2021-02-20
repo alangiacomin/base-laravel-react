@@ -134,6 +134,20 @@ class InstallCommand extends BaseCommand
             'MIX_APP_URL'
         );
 
+        $this->info('Append .gitignore entries');
+        $this->fileAppendContent(
+            $filesystem,
+            base_path('.gitignore'),
+            '/public/**/',
+            '/public/**/'
+        );
+        $this->fileAppendContent(
+            $filesystem,
+            base_path('.gitignore'),
+            '/public/mix-manifest.json',
+            '/public/mix-manifest.json'
+        );
+
         $this->info('Adding package.json "start" script');
         $this->fileReplaceContent(
             $filesystem,
