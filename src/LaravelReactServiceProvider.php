@@ -36,6 +36,7 @@ class LaravelReactServiceProvider extends ServiceProvider
             ],
             'mix' => [
                 "{$publishablePath}/webpack.mix.js" => base_path('webpack.mix.js'),
+                "{$publishablePath}/.eslintrc" => base_path('.eslintrc'),
             ],
             'vscode' => [
                 "{$publishablePath}/dummy.code-workspace" => base_path(basename(base_path()) . '.code-workspace'),

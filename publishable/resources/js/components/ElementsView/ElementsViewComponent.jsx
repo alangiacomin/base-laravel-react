@@ -17,7 +17,7 @@ const ElementsViewComponent = (props) => {
               {types.map((type, index) => (
                 <Button
                   key={uniqueId('button_view_')}
-                  aria-label={'View as ' + type}
+                  aria-label={`View as ${type}`}
                   variant="light"
                   active={type === activeType}
                   onClick={() => {

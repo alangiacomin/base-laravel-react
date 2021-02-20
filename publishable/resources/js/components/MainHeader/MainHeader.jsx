@@ -9,3 +9,6 @@ const MainHeader = () => (
 
 // MainHeader.propTypes = {
 //   children: PropTypes.node.isRequired,
+// }
+
+export default MainHeader;

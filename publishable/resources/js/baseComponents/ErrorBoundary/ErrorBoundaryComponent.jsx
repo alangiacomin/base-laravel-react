@@ -4,7 +4,7 @@ import React, { useCallback } from 'react';
 import { Button } from 'react-bootstrap';
 
 const ErrorBoundaryComponent = (props) => {
-  const { homepageRoute } = props;
+  // const { homepageRoute } = props;
   const reload = useCallback(() => window.location.reload(), []);
   return (
     <div

@@ -15,3 +15,6 @@ const Home = (props) => (
 
 // Home.propTypes = {
 //   testo: PropTypes.string.isRequired,
+// }
+
+export default Home;
