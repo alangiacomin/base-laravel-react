@@ -40,8 +40,8 @@ const ErrorBoundaryComponent = (props) => {
   );
 };
 
-ErrorBoundaryComponent.propTypes = {
-  homepageRoute: PropTypes.string.isRequired,
-};
+// ErrorBoundaryComponent.propTypes = {
+//   homepageRoute: PropTypes.string.isRequired,
+// };
 
 export default ErrorBoundaryComponent;
