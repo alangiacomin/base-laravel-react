@@ -3,10 +3,10 @@ import { PropTypes } from 'prop-types';
 import React from 'react';
 import { Provider } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
+import ErrorBoundary from './baseComponents/ErrorBoundary/ErrorBoundary';
+import ProtectedRoute from './baseComponents/ProtectedRoute';
+import ScrollToTop from './baseComponents/ScrollToTop/ScrollToTop';
 import { renderNotFound } from './common/renderHelpers';
-import ScrollToTop from './components/ScrollToTop';
-import ErrorBoundary from './components/ErrorBoundary';
-import ProtectedRoute from './components/ProtectedRoute';
 import routesWithComponents from './config/routesWithComponents';
 import { history } from './configureStore';
 

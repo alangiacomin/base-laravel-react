@@ -1,13 +1,15 @@
-import { lazy, Suspense } from "react";
+import React, { lazy, Suspense } from 'react';
 
 const lazyImport = (func) => {
   const Component = lazy(func);
   return () => (
     <Suspense fallback={null}>
       <Component />
-    </Suspense>);
-}
+    </Suspense>
+  );
+};
 
 export {
-  lazyImport
+  // eslint-disable-next-line import/prefer-default-export
+  lazyImport,
 };

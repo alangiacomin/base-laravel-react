@@ -1,22 +1,8 @@
 import { setDocumentTitle } from '@alangiacomin/js-utils';
-import React, { lazy } from 'react';
-import { Container } from 'react-bootstrap';
-import LayoutTopFooter from '../../components/LayoutTopFooter';
-import SuspensePageLoading from '../../components/Suspense/SuspensePageLoading';
 
-const Home = lazy(() => import('./Home'));
-
-const HomePage = (props) => {
+const HomePage = () => {
   setDocumentTitle();
-  return (
-    <LayoutTopFooter>
-      <Container>
-        <SuspensePageLoading>
-          <Home {...props} />
-        </SuspensePageLoading>
-      </Container>
-    </LayoutTopFooter>
-  );
+  return null;
 };
 
 export default HomePage;

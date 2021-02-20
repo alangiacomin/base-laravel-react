@@ -3,7 +3,7 @@ import { PropTypes } from 'prop-types';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { connect } from 'react-redux';
-import SuspenseNull from '../Suspense/SuspenseNull';
+import SuspenseNull from '../../baseComponents/Suspense/SuspenseNull';
 import ErrorComponent from './ErrorComponent';
 
 const Error = (props) => {

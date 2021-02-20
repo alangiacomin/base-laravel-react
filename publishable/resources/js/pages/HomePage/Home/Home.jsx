@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import SuspenseNull from '../../../components/Suspense/SuspenseNull';
+import SuspenseNull from '../../../baseComponents/Suspense/SuspenseNull';
 import HomeComponent from './HomeComponent';
 
 const Home = (props) => {

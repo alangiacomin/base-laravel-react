@@ -1,7 +1,7 @@
 import { setDocumentTitle } from '@alangiacomin/js-utils';
 import React, { lazy } from 'react';
 import LayoutOneColumn from '../../components/LayoutOneColumn';
-import SuspensePageLoading from '../../components/Suspense/SuspensePageLoading';
+import SuspensePageLoading from '../../baseComponents/Suspense/SuspensePageLoading';
 
 const Error = lazy(() => import('../../components/Error'));
 

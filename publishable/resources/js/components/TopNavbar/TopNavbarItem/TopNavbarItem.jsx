@@ -2,7 +2,7 @@ import { hasPermission } from '@alangiacomin/js-utils';
 import { PropTypes } from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
-import SuspenseNull from '../../Suspense/SuspenseNull';
+import SuspenseNull from '../../../baseComponents/Suspense/SuspenseNull';
 import TopNavbarItemComponent from './TopNavbarItemComponent';
 
 const TopNavbarItem = (props) => {
