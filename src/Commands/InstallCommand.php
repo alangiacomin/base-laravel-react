@@ -153,7 +153,7 @@ class InstallCommand extends BaseCommand
             $filesystem,
             base_path('package.json'),
             '"scripts": {',
-            '"scripts": {' + "\n" + '        "start": "npm run watch",'
+            '"scripts": {' . "\n" . '        "start": "npm run watch",'
         );
 
         $this->info('Adding package.json dependencies');
