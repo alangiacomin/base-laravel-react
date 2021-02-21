@@ -18,7 +18,15 @@ mix.webpackConfig({
   output: {
     publicPath: process.env.APP_BASENAME,
     chunkFilename: 'js/app/[id].js?id=[chunkhash]',
-  }
+  },
+  module: {
+    rules: [
+      {
+        test: /\.scss/,
+        loader: 'import-glob-loader',
+      },
+    ],
+  },
 });
 
 mix.copyDirectory('resources/images', 'public/images');
