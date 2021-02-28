@@ -45,6 +45,8 @@ class InstallCommand extends BaseCommand
 
     public function handleVoyager(Filesystem $filesystem)
     {
+        $stubsPath = dirname(__DIR__, 2) . '/stubs';
+
         $this->call('voyager:install');
 
         $this->info('Adding Voyager usings');
@@ -57,6 +59,13 @@ class InstallCommand extends BaseCommand
             );
             $filesystem->put(base_path('routes/web.php'), $routes_contents);
         }
+        $this->fileReplaceContent(
+            $filesystem,
+            base_path('app/Models/User.php'),
+            "\n}\n",
+            "\n" . $filesystem->get($stubsPath . '/Models/User_fullData.php') . "}\n",
+            'function fullData()'
+        );
     }
 
     public function handleLaravelReact(Filesystem $filesystem)
