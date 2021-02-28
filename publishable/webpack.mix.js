@@ -14,6 +14,31 @@ const mix = require('laravel-mix');
 
 mix.setResourceRoot(process.env.APP_BASENAME);
 
+if (process.env.SYNC === '1') {
+  mix.browserSync({
+    open: false,
+    proxy: '127.0.0.1:8000',
+    // middleware: process.env.MOCK === '1' ? [restMock] : false,
+    notify: false, // The small pop-over notifications in the browser are not always needed/wanted
+    ignore: ['**/*.php'],
+    // see https://www.browsersync.io/docs/options#option-serveStatic
+    // serveStatic: [
+    //   {
+    //     route: '/storage',
+    //     dir: 'storage/app/public',
+    //   },
+    // ],
+  });
+}
+
+if (process.env.ALIAS === '1') {
+  mix.alias({
+    react: path.join(process.cwd(), 'node_modules/react'),
+    axios: path.join(process.cwd(), 'node_modules/axios'),
+    'react-redux': path.join(process.cwd(), 'node_modules/react-redux'),
+  });
+}
+
 mix.webpackConfig({
   output: {
     publicPath: process.env.APP_BASENAME,
@@ -21,6 +46,15 @@ mix.webpackConfig({
   },
   module: {
     rules: [
+      {
+        test: /\.jsx?$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+          },
+        },
+      },
       {
         test: /\.scss/,
         loader: 'import-glob-loader',

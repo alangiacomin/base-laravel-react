@@ -184,6 +184,8 @@ class InstallCommand extends BaseCommand
         $this->addNpmDependencies($filesystem, [
             '@alangiacomin/js-utils' => '^1.1.0',
             '@alangiacomin/ui-components' => '^1.0.0',
+            '@babel/preset-env' => '^7.12.11',
+            '@babel/preset-react' => '^7.12.13',
             '@fortawesome/fontawesome-svg-core' => '^1.2.32',
             '@fortawesome/free-brands-svg-icons' => '^5.15.1',
             '@fortawesome/free-solid-svg-icons' => '^5.15.1',

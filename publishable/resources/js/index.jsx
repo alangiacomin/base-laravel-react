@@ -16,10 +16,10 @@ import 'core-js/stable';
 import React from 'react';
 import { render } from 'react-dom';
 import 'regenerator-runtime/runtime';
-import { setUserProfile } from './actions/UserActions';
 import App from './App';
 import configureAppStore from './configureStore';
 import './i18nextConf';
+import { userActions } from './providers/UserProvider';
 
 library.add(fas, fab);
 
@@ -29,7 +29,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 const store = configureAppStore();
 
-store.dispatch(setUserProfile(window.user));
+// devo farlo così senza useDispatch() perché ancora non sono dentro il <Provider />
+store.dispatch(userActions.setProfile(window.user));
 
 render(<App store={store} />, document.getElementById('app'));
-// render(<Suspense fallback={<div>Loading...</div>}><App store={store} /></Suspense>, document.getElementById('app'));
