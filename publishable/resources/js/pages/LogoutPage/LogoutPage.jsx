@@ -1,5 +1,5 @@
 import { setDocumentTitle } from '@alangiacomin/js-utils';
-import { httpRequest } from '../../apis/node_modules/@alangiacomin/ui-components/utils';
+import { httpRequest } from '@alangiacomin/ui-components/utils';
 import React, { useEffect } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
