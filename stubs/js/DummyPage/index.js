@@ -1,4 +1,4 @@
-import { lazyImport } from '@alangiacomin/ui-components/utils';
+import { lazyImport } from '../../../publishable/resources/js/apis/node_modules/@alangiacomin/ui-components/utils';
 
 const DummyPage = lazyImport(() => import('./DummyPage'));
 

@@ -1,6 +1,6 @@
 import { setDocumentTitle } from '@alangiacomin/js-utils';
 import { Form, Input, Submit } from '@alangiacomin/ui-components/components';
-import { httpRequest } from '@alangiacomin/ui-components/utils';
+import { httpRequest } from '../../apis/node_modules/@alangiacomin/ui-components/utils';
 import React, { useCallback, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';

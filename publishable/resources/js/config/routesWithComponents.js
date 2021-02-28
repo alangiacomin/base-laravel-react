@@ -1,7 +1,6 @@
 import HomePage from '../pages/HomePage';
 import LoginPage from '../pages/LoginPage';
 import LogoutPage from '../pages/LogoutPage';
-import PaginaPage from '../pages/PaginaPage';
 import routes from './routes';
 
 const routesWithComponents = {
@@ -18,11 +17,6 @@ const routesWithComponents = {
   logout: {
     ...routes.logout,
     component: LogoutPage,
-  },
-
-  pagina: {
-    ...routes.pagina,
-    component: PaginaPage,
   },
 };
 

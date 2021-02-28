@@ -1,4 +1,4 @@
-import { lazyImport } from '../../common/utils';
+import { lazyImport } from '@alangiacomin/ui-components/utils';
 
 const HomePage = lazyImport(() => import('./HomePage'));
 
