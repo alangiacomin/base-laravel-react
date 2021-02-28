@@ -1,3 +1,5 @@
-import HomePage from './HomePage';
+import { lazyImport } from '../../common/utils';
+
+const HomePage = lazyImport(() => import('./HomePage'));
 
 export default HomePage;
