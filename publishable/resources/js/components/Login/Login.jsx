@@ -1,4 +1,3 @@
-import { setDocumentTitle } from '@alangiacomin/js-utils';
 import { Form, Input, Submit } from '@alangiacomin/ui-components/components';
 import { httpRequest } from '@alangiacomin/ui-components/utils';
 import React, { useCallback, useState } from 'react';
@@ -8,13 +7,10 @@ import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import * as yup from 'yup';
 import { postLogin } from '../../apis/apiUtente';
-import LayoutMain from '../../components/LayoutMain';
 import routes from '../../config/routes';
 import { userActions } from '../../providers/UserProvider';
 
-const LoginPage = () => {
-  setDocumentTitle('Login');
-
+const Login = () => {
   const { t } = useTranslation('login');
   const [errorMessage, setErrorMessage] = useState();
   const history = useHistory();
@@ -49,42 +45,40 @@ const LoginPage = () => {
       });
   }, [t, history, dispatch, postLoginActions]);
   return (
-    <LayoutMain>
-      <Container>
-        <Form
-          className="my-5"
-          initialValues={initialValues}
-          onSubmit={onSubmit}
-          validationSchema={validationSchema}
-        >
-          <Row>
-            <Col>
-              <Input
-                name="email"
-                label="Email:"
-                labelLeft
-                placeholder="email"
-                autoFocus
-              />
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <Input
-                name="password"
-                label="Password:"
-                labelLeft
-                placeholder="password"
-                type="password"
-              />
-            </Col>
-          </Row>
-          <Submit>Login</Submit>
-          <div className="error">{errorMessage}</div>
-        </Form>
-      </Container>
-    </LayoutMain>
+    <Container>
+      <Form
+        className="my-5"
+        initialValues={initialValues}
+        onSubmit={onSubmit}
+        validationSchema={validationSchema}
+      >
+        <Row>
+          <Col>
+            <Input
+              name="email"
+              label="Email:"
+              labelLeft
+              placeholder="email"
+              autoFocus
+            />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Input
+              name="password"
+              label="Password:"
+              labelLeft
+              placeholder="password"
+              type="password"
+            />
+          </Col>
+        </Row>
+        <Submit>Login</Submit>
+        <div className="error">{errorMessage}</div>
+      </Form>
+    </Container>
   );
 };
 
-export default LoginPage;
+export default Login;

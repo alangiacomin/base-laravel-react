@@ -4,10 +4,10 @@ import React, { useEffect } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import { postLogout } from '../../apis/apiUtente';
-import LayoutMain from '../../components/LayoutMain';
-import routes from '../../config/routes';
-import { userActions } from '../../providers/UserProvider';
+import { postLogout } from '../apis/apiUtente';
+import LayoutMain from '../components/LayoutMain';
+import routes from '../config/routes';
+import { userActions } from '../providers/UserProvider';
 
 const LogoutPage = () => {
   setDocumentTitle('Logout');
