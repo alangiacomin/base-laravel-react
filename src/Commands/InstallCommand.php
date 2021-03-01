@@ -176,6 +176,20 @@ class InstallCommand extends BaseCommand
             $filesystem,
             base_path('package.json'),
             '"scripts": {',
+            '"scripts": {' . "\n" . '        "alias": "cross-env SYNC=1 ALIAS=1 npm run start"',
+            '"alias": "cross-env SYNC=1 ALIAS=1 npm run start"'
+        );
+        $this->fileReplaceContent(
+            $filesystem,
+            base_path('package.json'),
+            '"scripts": {',
+            '"scripts": {' . "\n" . '        "sync": "cross-env SYNC=1 npm run start",',
+            '"sync": "cross-env SYNC=1 npm run start"'
+        );
+        $this->fileReplaceContent(
+            $filesystem,
+            base_path('package.json'),
+            '"scripts": {',
             '"scripts": {' . "\n" . '        "start": "npm run watch",',
             '"start": "npm run watch"'
         );
