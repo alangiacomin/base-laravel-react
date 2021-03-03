@@ -1,4 +1,4 @@
-import { objectValues } from '@alangiacomin/js-utils';
+import { objectValues } from '@alangiacomin/ui-components';
 import { PropTypes } from 'prop-types';
 import React, { lazy, Suspense } from 'react';
 

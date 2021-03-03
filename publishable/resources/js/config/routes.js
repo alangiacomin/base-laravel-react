@@ -1,4 +1,4 @@
-import { absoluteUrl, explodeRoutes } from '@alangiacomin/js-utils';
+import { absoluteUrl, explodeRoutes } from '@alangiacomin/ui-components';
 
 const routesConfig = {
   home: {

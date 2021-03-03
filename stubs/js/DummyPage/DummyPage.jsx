@@ -1,4 +1,4 @@
-import { setDocumentTitle } from '@alangiacomin/js-utils';
+import { setDocumentTitle } from '@alangiacomin/ui-components';
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import LayoutOneColumn from '../../components/LayoutOneColumn';

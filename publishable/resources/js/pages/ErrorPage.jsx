@@ -1,4 +1,4 @@
-import { setDocumentTitle } from '@alangiacomin/js-utils';
+import { setDocumentTitle } from '@alangiacomin/ui-components';
 import React, { lazy } from 'react';
 import PageLoading from '../baseComponents/PageLoading';
 import LayoutMain from '../components/LayoutMain';

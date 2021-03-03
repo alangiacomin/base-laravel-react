@@ -196,7 +196,6 @@ class InstallCommand extends BaseCommand
 
         $this->info('Adding package.json dependencies');
         $this->addNpmDependencies($filesystem, [
-            '@alangiacomin/js-utils' => '^1.1.0',
             '@alangiacomin/ui-components' => '^1.0.0',
             '@babel/preset-env' => '^7.12.11',
             '@babel/preset-react' => '^7.12.13',

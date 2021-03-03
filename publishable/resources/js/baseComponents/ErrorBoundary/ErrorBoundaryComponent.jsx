@@ -1,4 +1,4 @@
-import { absoluteUrl } from '@alangiacomin/js-utils';
+import { absoluteUrl } from '@alangiacomin/ui-components';
 // import { PropTypes } from 'prop-types';
 import React, { useCallback } from 'react';
 import { Button } from 'react-bootstrap';

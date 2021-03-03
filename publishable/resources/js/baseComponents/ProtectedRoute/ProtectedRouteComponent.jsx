@@ -1,4 +1,4 @@
-import { hasPermission } from '@alangiacomin/js-utils';
+import { hasPermission } from '@alangiacomin/ui-components';
 import { PropTypes } from 'prop-types';
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';

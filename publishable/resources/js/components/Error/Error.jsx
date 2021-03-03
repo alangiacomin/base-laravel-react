@@ -1,4 +1,4 @@
-import { upperFirst } from '@alangiacomin/js-utils';
+import { upperFirst } from '@alangiacomin/ui-components';
 import { PropTypes } from 'prop-types';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
