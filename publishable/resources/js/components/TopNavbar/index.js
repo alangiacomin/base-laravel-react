@@ -1,4 +1,4 @@
-import { lazyImport } from '@alangiacomin/ui-components/utils';
+import { lazyImport } from '@alangiacomin/ui-components';
 
 const TopNavbar = lazyImport(() => import('./TopNavbar'));
 
