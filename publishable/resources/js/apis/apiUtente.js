@@ -1,4 +1,4 @@
-import { httpRequest } from '@alangiacomin/ui-components/utils';
+import { httpRequest } from '@alangiacomin/ui-components';
 
 const postLogin = (email, password, actions) => httpRequest.post(
   '/login',
